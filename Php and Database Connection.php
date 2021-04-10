@@ -1,3 +1,4 @@
+//Local Host Connection
 <?php
 $servername= "localhost";
 $username= "root";
