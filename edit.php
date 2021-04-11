@@ -1,8 +1,10 @@
 <?php
     
     include("Php and Database Connection.php");
+    //Getting id from url
     $id = $_GET['id'];
     
+    //runs select query 
     $qry ="SELECT * FROM employee  WHERE id='$id'";
     $result = $conn->query($qry);
     if($result->num_rows>0)
@@ -39,16 +41,18 @@
         <button type="submit" name="btn">Update</button>
     
 <?php
-
+//Functions performed as button is pressed
 if(isset($_POST['btn']))
 
 {
+    //stores values of text field in variables
     $fname= $_POST['fname'];
     $lname= $_POST['lname'];
     $email= $_POST['email'];
     $address = $_POST['address'];
     $number = $_POST['number'];
 
+    //update query
     $sql="UPDATE employee SET first_name='$fname',last_name='$lname',email='$email',address='$address',number='$number' WHERE id='$id'";
     if($conn->query($sql)===TRUE)
 
