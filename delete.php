@@ -9,7 +9,9 @@
 <body>
     <?php
     include("Php and Database Connection.php");
+    //Takes id from url and stores in $id variable
     $id = $_GET['id'];
+    //delete query
     $qry = "DELETE FROM employee WHERE id ='$id'";
     $result = $conn->query($qry);
     
