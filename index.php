@@ -31,6 +31,7 @@
             </tr>
             <?php
             include("Php and Database Connection.php");
+    // select query showing data
             $qry = "SELECT * FROM employee";
             $result =  $conn->query($qry);
             if($result->num_rows>0){
