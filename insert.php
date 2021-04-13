@@ -23,7 +23,7 @@
 
     <?php
     include("Php and Database Connection.php");
-
+// When button is pressed data from text fields are stored in variables
 if(isset($_POST['btn']))
 
 {
@@ -33,6 +33,7 @@ if(isset($_POST['btn']))
     $address = $_POST['address'];
     $number = $_POST['number'];
 
+//Insert Query
     $sql="INSERT INTO employee(first_name,last_name,email,address,number) VALUES('$fname','$lname','$email','$address','$number')";
     if($conn->query($sql)===TRUE)
     
